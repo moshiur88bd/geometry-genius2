@@ -42,10 +42,26 @@ function calculateRectangleArea(){
 }
 
 function calculateParallelogramArea(){
+        // parallelogram area calculate 
         const base = getInputValue('parallelogram-base')
         const height = getInputValue('parallelogram-height');
         const area = base * height;
         setElementInnerText('parallelogram-area', area);
+
+        // ellipse area calculate 
+        const firstRadius = getInputValue('ellipse-first-radius');
+        console.log(firstRadius);
+        const secondRadius = getInputValue('ellipse-second-radius');
+        const ellipseArea = 3.14 * firstRadius * secondRadius;
+        setElementInnerText('ellipse-area', ellipseArea);
+}
+
+function calculateEllipseArea(){
+        // ellipse area calculate 
+        const majorRadius = getInputValue('ellipse-major-radius');
+        const minorRadius = getInputValue('ellipse-minor-radius');
+        const ellipseArea = 3.14 * majorRadius * minorRadius;
+        setElementInnerText('ellipse-area', ellipseArea);
 }
 
 // reusable input value in a number 
