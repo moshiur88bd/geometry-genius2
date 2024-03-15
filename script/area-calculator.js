@@ -61,7 +61,8 @@ function calculateEllipseArea(){
         const majorRadius = getInputValue('ellipse-major-radius');
         const minorRadius = getInputValue('ellipse-minor-radius');
         const ellipseArea = 3.14 * majorRadius * minorRadius;
-        setElementInnerText('ellipse-area', ellipseArea);
+        const ellipseAreaToFixed = ellipseArea.toFixed(2);
+        setElementInnerText('ellipse-area', ellipseAreaToFixed);
 }
 
 // reusable input value in a number 
